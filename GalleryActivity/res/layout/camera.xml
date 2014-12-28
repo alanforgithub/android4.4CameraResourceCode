@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This layout is shared by phone and tablet in landscape orientation. -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.android.camera.mobile.view.MobileFrameLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:splitMotionEvents="false" >
+
+        <LinearLayout
+            android:id="@+id/left_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <include layout="@layout/ntian_camera_choice" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/camera_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:splitMotionEvents="false" >
+
+            <include layout="@layout/gl_root_group" />
+
+            <FrameLayout
+                android:id="@+id/camera_app_root"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:splitMotionEvents="false" >
+
+                <include layout="@layout/preview_frame" />
+
+                <include layout="@layout/view_layers" />
+            </FrameLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/right_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <include layout="@layout/ntian_camera_filter" />
+        </LinearLayout>
+    </com.android.camera.mobile.view.MobileFrameLayout>
+
+</FrameLayout>

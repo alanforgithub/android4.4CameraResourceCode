@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ntian_choice_title_bar_bg"
+        android:gravity="center"
+        android:text="@string/ntian_choice"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
+
+    <GridView
+        android:id="@+id/option_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ntian_choice_bg"
+        android:numColumns="2"
+        android:paddingTop="50dp"
+        android:paddingBottom="80dp"
+        android:verticalSpacing="40dp" >
+    </GridView>
+
+</merge>
